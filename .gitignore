@@ -1,0 +1,41 @@
+/.nyc_output
+/coverage
+/node_modules
+/sign
+/dist/
+!/dist/*.rpk
+/build
+.husky/
+/src/common/dict/
+/.codegraph/
+/.omo/
+/.tmp/
+/opencode.json.bak*
+.opencode/mcp.json
+/fork_astrobox/
+/scripts/__pycache__/
+*.pyc
+
+# Large data source files (do not commit)
+data/ecdict.csv
+data/ecdict_tagged_14942_full.csv
+data/ecdict_tagged_14942_compact.json
+data/ecdict_tagged_14942_compact.csv.bak
+data/wn3.1.dict.tar.gz
+data/cedict.txt.gz
+data/bnc_coca_word_family_lists_v2.xlsx
+
+# Raw WordNet database (53MB build input, fetch separately)
+/data/dict
+
+# Internal tool/agent configs and scratch
+/.claude/
+/.opencode/
+/.vscode/
+/omo
+/opencode.json
+/litellm_config.yaml
+/fork_astrobox/
+/release_repo/
+/start_litellm.bat
+/start_litellm.ps1
