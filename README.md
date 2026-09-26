@@ -46,7 +46,7 @@
 
 | 页面 | 路由 | 说明 |
 |------|------|------|
-| **首页** | `pages/index` | 入口 — 4 个主按钮 + 关于 / 赞助 |
+| **首页** | `pages/index` | 入口 — 4 个主按钮 + 关于 |
 | **搜索** | `pages/search` | 输入法输入、光标编辑、自动补全 |
 | **结果** | `pages/results` | 英文/中文查词结果 |
 | **详情** | `pages/detail` | 单词释义、变形、收藏切换 |
@@ -94,6 +94,8 @@ npm run build:resolutions
 产物位于 `dist/resolutions/`，其中 `manifest.json` 记录每个包的目标宽度和 SHA-256。安装时请根据设备屏幕宽度选择对应的 `.rpk`。
 
 # 仅推送已有 RPK，跳过构建
+
+```bash
 npm run deploy:watch:fast
 ```
 
