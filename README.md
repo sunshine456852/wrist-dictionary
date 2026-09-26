@@ -200,8 +200,5 @@ python scripts/generate_watch_dict.py
 
 腕上词典是开源的手腕伴侣。词库数据来自 [ECDICT](https://github.com/skywind3000/ECDICT)。
 
----
 
-<p align="center">
-  <sub><a href="https://github.com/pcai7296/wrist-dictionary">GitHub 仓库</a></sub>
 </p>
