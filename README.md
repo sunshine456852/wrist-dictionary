@@ -12,7 +12,7 @@
   <img src="https://img.shields.io/badge/版本-2.5.0-1d74e8?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/平台-Mi%20Band-1d74e8?style=flat-square" alt="Platform" />
   <img src="https://img.shields.io/badge/框架-Vela%20QuickApp-1d74e8?style=flat-square" alt="Framework" />
-  <img src="https://img.shields.io/badge/词库-14k%2B-2ea043?style=flat-square" alt="Headwords" />
+  <img src="https://img.shields.io/badge/词库-20k%2B-2ea043?style=flat-square" alt="Headwords" />
   <img src="https://img.shields.io/badge/输入-英文-1d74e8?style=flat-square" alt="Languages" />
   <img src="https://img.shields.io/badge/工具-aiot--toolkit-ff6b35?style=flat-square" alt="Build" />
 </p>
@@ -21,7 +21,7 @@
 
 ## 简介
 
-**腕上词典** 是一款运行在小米手环上的 Vela 快应用，把一部完整的英汉词典装进手腕。查英语单词、汉字、动词变形——全程离线，抬手即用。
+**腕上词典** 是一款运行在红米手表上的 Vela 快应用，把一部完整的英汉词典装进手腕。查英语单词、汉字、动词变形——全程离线，抬手即用。
 
 基于小米 `aiot-toolkit` 开发，内置 **20，000余条词汇**（数据源：ECDICT + BNC/COCA 词族），适配Redmi Watch5。
 
@@ -38,6 +38,7 @@
 - **📄 分页结果** — 搜索结果分页展示 + 动态增量渲染，翻页自动滚屏
 - **🌙 深色主题** — 纯黑底色 `#000000` + 蓝色强调 `#1d74e8`，AMOLED 省电，暗光不刺眼
 - **📦 纯离线** — 词典数据内置于应用，无需网络
+- **👍 速看变形** — 单词详细页内最下方包含该单词的相关变形词，简单快捷查看变形（因索引问题，可能需要稍微等几秒）
 
 ---
 
