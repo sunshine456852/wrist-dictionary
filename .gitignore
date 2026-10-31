@@ -39,3 +39,7 @@ data/bnc_coca_word_family_lists_v2.xlsx
 /release_repo/
 /start_litellm.bat
 /start_litellm.ps1
+
+# AIoT IDE (QuickApp Studio) local artifacts
+/.ide/
+/.quickapp.preview.json

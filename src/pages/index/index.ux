@@ -49,16 +49,18 @@ import buildTarget from "../../common/buildTarget"
 
 export default {
   private: {
-    screenProfile: buildTarget.profile
+    // 兜底：buildTarget.profile 为空时不能生成 page-undefined 这类非法类名
+    screenProfile: (buildTarget && buildTarget.profile) || "pill-standard"
   },
 
   onInit() {
     const app = this.$app.$def
-    this.screenProfile = buildTarget.profile
+    // 兜底：首帧/异步回调都保证拿到合法 profile
+    this.screenProfile = (buildTarget && buildTarget.profile) || "pill-standard"
     device.getInfo({
       success: (data) => {
         app.updateScreenInfo(data)
-        this.screenProfile = app.data.screenProfile
+        this.screenProfile = app.data.screenProfile || "pill-standard"
       },
       fail: (data, code) => {
         
@@ -179,7 +181,8 @@ export default {
 /* Pure-black theme. One .spacer (flex:1) sits between title/icon and
    buttons/bottom-row, so extra vertical space distributes evenly on every
    screen: 192x490, 212x520, 336x336, 432x514 (Redmi Watch 5) and 466x466. */
-.page {
+.page,
+.page-pill-standard {
   width: 100%;
   height: 100%;
   padding-top: 32px;
@@ -192,7 +195,8 @@ export default {
   flex: 1;
 }
 
-.title {
+.title,
+.title-pill-standard {
   width: 200px;
   height: 40px;
   color: #ffffff;
@@ -214,7 +218,8 @@ export default {
   align-items: center;
 }
 
-.main-button {
+.main-button,
+.main-button-pill-standard {
   width: 156px;
   height: 48px;
   margin-bottom: 10px;
@@ -223,7 +228,9 @@ export default {
   align-items: center;
 }
 
-.btn-icon {
+.btn-icon,
+.btn-icon-pill-standard,
+.btn-icon-pill-compact {
   width: 22px;
   height: 22px;
   margin-left: 14px;
@@ -243,7 +250,8 @@ export default {
   color: #ffffff;
 }
 
-.bottom-row {
+.bottom-row,
+.bottom-row-pill-standard {
   width: 152px;
   height: 44px;
   margin-bottom: 10px;
@@ -251,7 +259,8 @@ export default {
   justify-content: center;
 }
 
-.small-button {
+.small-button,
+.small-button-pill-standard {
   width: 90px;
   height: 42px;
   border-radius: 12px;
@@ -298,7 +307,8 @@ export default {
   height: 62px;
 }
 
-.button-group-pill-standard {
+.button-group-pill-standard,
+.button-group-pill-compact {
   margin-top: 12px;
 }
 
